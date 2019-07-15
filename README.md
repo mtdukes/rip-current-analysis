@@ -6,7 +6,14 @@ The analysis revealed that the state's southeastern beaches [have seen an uptick
 ## Methodology
 Reporters downloaded surf report information on June 20, 2019, from [Iowa State University's Mesonet](https://mesonet.agron.iastate.edu/wx/afos), a repository of the weather products issued by the NWS.
 
-The downloaded file [was in plain text format](https://github.com/mtdukes/rip-current-analysis/blob/master/afos-srfilm-20190620-20030515.txt). [A Python script](https://github.com/mtdukes/rip-current-analysis/blob/master/parseRips.py) using regular expressions parsed the file into [a comma-separated value file](https://github.com/mtdukes/rip-current-analysis/blob/master/rip_risk.csv), which could then be cleaned and analyzed in Excel. [The resulting Excel file](https://github.com/mtdukes/rip-current-analysis/blob/master/rip_risk_ilm.xlsx) contained more than 31,000 discrete forecasts for southeastern North Carolina and northeastern South Carolina beaches.
+The downloaded file [was in plain text format](https://github.com/mtdukes/rip-current-analysis/blob/master/afos-srfilm-20190620-20030515.txt). A Python script, [```parseRips.py```](https://github.com/mtdukes/rip-current-analysis/blob/master/parseRips.py) using regular expressions parsed the file into [a comma-separated value file](https://github.com/mtdukes/rip-current-analysis/blob/master/rip_risk.csv), which could then be cleaned and analyzed in Excel.
+
+**Usage:**
+```bash
+python parseRips.py afos-srfilm-20190620-20030515.txt
+```
+
+[The resulting Excel file](https://github.com/mtdukes/rip-current-analysis/blob/master/rip_risk_ilm.xlsx) contained more than 31,000 discrete forecasts for southeastern North Carolina and northeastern South Carolina beaches.
 
 Analysis of the data focused only on "Today" forecasts and North Carolina beaches. These forecasts typically run from March or April through October.
 
